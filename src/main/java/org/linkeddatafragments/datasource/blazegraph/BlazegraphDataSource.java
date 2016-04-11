@@ -156,7 +156,7 @@ System.out.println( "SHUTTING DOWN THE REPO" );
 
         final RepositoryConnection cxn;
         try {
-            cxn = repo.getConnection();
+            cxn = repo.getReadOnlyConnection();
             cxn.begin();
         }
         catch ( RepositoryException e ) {
